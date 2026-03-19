@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy — TapScan QR Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #050608;
+            --bg-panel: #0e1118;
+            --bg-elevated: #151a24;
+            --text: #e8ecf4;
+            --text-muted: #8b95a8;
+            --accent: #3dff9a;
+            --accent-dim: rgba(61, 255, 154, 0.12);
+            --line: rgba(255, 255, 255, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Manrope", system-ui, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--line) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse 70% 50% at 50% 0%, black, transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 24px 80px;
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-bottom: 36px;
+            transition: color 0.2s;
+        }
+
+        .back:hover {
+            color: var(--accent);
+        }
+
+        .doc-header {
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .doc-header h1 {
+            font-family: "Syne", sans-serif;
+            font-weight: 800;
+            font-size: clamp(1.85rem, 4vw, 2.35rem);
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .doc-header h1 span {
+            color: var(--accent);
+        }
+
+        .meta-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: var(--accent-dim);
+            color: var(--accent);
+            border: 1px solid rgba(61, 255, 154, 0.2);
+        }
+
+        .callout {
+            background: var(--bg-panel);
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--accent);
+            border-radius: 16px;
+            padding: 22px 24px;
+            margin: 28px 0;
+        }
+
+        .callout p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .callout strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        article section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-family: "Syne", sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        p,
+        li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 1.2em;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: #6effb8;
+        }
+
+        .footer-block {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+            text-align: center;
+        }
+
+        .footer-block p {
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <a class="back" href="index.html">← Back to TapScan</a>
+
+        <header class="doc-header">
+            <h1>Privacy at a glance — <span>TapScan QR Code</span></h1>
+            <div class="meta-pills">
+                <span class="pill">Utilities</span>
+                <span class="pill">On-device first</span>
+                <span class="pill">Last updated: March 19, 2026</span>
+            </div>
+        </header>
+
+        <article>
+            <div class="callout">
+                <p><strong>Summary:</strong> According to the App Store privacy label, the developer states that <strong>TapScan QR Code does not collect data from this app</strong>. This companion page explains how the product is designed around local processing, optional biometrics, and your control over history—not around server-side profiles.</p>
+            </div>
+
+            <section>
+                <h2>Who we are</h2>
+                <p>TapScan QR Code is published on the App Store by <strong>Said Lamaarague</strong>. This website summarizes privacy topics for visitors; the authoritative privacy policy maintained by the developer is available at the link below.</p>
+                <p><a href="https://sites.google.com/view/tapscan-qr-code/" target="_blank" rel="noopener noreferrer">Official TapScan QR Code privacy policy (Google Sites)</a></p>
+            </section>
+
+            <section>
+                <h2>What the app does with your content</h2>
+                <p>TapScan is built to <strong>read QR codes from images you choose</strong> (for example from your Photo Library or imported pictures) and to <strong>create new QR images</strong> on demand. Decoding and encoding are intended to run <strong>on your device</strong>, consistent with the product description: your photos and extracted strings are not described as being uploaded to TapScan-operated servers for processing.</p>
+            </section>
+
+            <section>
+                <h2>Photo Library &amp; files</h2>
+                <p>To extract a code from a picture, the operating system may prompt you to allow access to photos or the system photo picker. That access is used <strong>only to let you select and analyze the image you picked</strong>. We do not use this page to grant or revoke those permissions—those controls live in iOS / iPadOS Settings under Privacy.</p>
+            </section>
+
+            <section>
+                <h2>Face ID, Touch ID &amp; passcode</h2>
+                <p>If you enable app lock, <strong>Apple’s Local Authentication framework</strong> can protect access to your scan and generation history. Biometric data stays on your device and is not sent to TapScan.</p>
+            </section>
+
+            <section>
+                <h2>History &amp; storage</h2>
+                <p>Items you save inside the app (such as past scans or generated codes) are described as manageable on-device: you can review, copy, or delete them. Uninstalling the app removes its sandbox data unless the operating system retains separate backups according to your device settings.</p>
+            </section>
+
+            <section>
+                <h2>Analytics, ads &amp; trackers</h2>
+                <p>The App Store listing indicates <strong>no data collection from the app</strong> by the developer for the labeled categories. This page does not replace Apple’s label, which may be updated when the app or store metadata changes.</p>
+            </section>
+
+            <section>
+                <h2>Children</h2>
+                <p>The app is rated <strong>4+</strong> on the App Store. TapScan is a general-purpose utility; parents and guardians should supervise younger users’ device permissions as they would for any app that accesses photos or generates shareable links.</p>
+            </section>
+
+            <section>
+                <h2>Regional notices</h2>
+                <p>If you exercise privacy rights under laws such as the GDPR or CCPA, use the contact or policy channels provided by the developer in the official privacy policy. This static site may not receive legal requests on behalf of the publisher.</p>
+            </section>
+
+            <section>
+                <h2>Changes</h2>
+                <p>We may revise this summary when the app or store disclosures change. The “Last updated” date at the top reflects edits to <em>this</em> page only; always check the App Store and the developer’s policy URL for the latest commitments.</p>
+            </section>
+
+            <section>
+                <h2>Questions</h2>
+                <p>For privacy questions specific to TapScan QR Code, refer to the developer’s official privacy policy and App Store support channels.</p>
+                <p><a href="https://sites.google.com/view/tapscan-qr-code/" target="_blank" rel="noopener noreferrer">sites.google.com/view/tapscan-qr-code</a></p>
+            </section>
+        </article>
+
+        <div class="footer-block">
+            <p>© TapScan QR Code · This page is an informational summary and does not replace the developer’s legal policy.</p>
+            <p style="margin-top: 12px;"><a href="index.html">Return to home</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
